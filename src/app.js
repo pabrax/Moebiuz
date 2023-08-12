@@ -1,8 +1,17 @@
-// se importa y se instancia la libreria de express
+// se importan las librerias y archivos necesarios
 import express from 'express';
+import morgan from 'morgan';
+import authRoutes from './routes/auth.routes.js'
 
 const app = express();
 
-// se dfine el puerto de escucha y manda un mensaje por consola
-app.listen(3000)
-console.log("server on port ", 3000);
+// middlewares
+app.use(morgan('dev'));
+app.use(express.json());
+
+// routes
+app.use('/api' , authRoutes);
+
+// exporta el modulo de express para usarlo en index.js
+export default app;
+
