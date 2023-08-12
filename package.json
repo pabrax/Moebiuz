@@ -1,0 +1,16 @@
+{
+  "name": "moebiuz",
+  "version": "1.0.0",
+  "description": "En la seccion de cambios se encuentran los cambios, novedades y implementaciones pendientes del sistema para desarrollar el proyecto:",
+  "main": "hola.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
