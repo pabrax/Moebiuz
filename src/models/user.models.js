@@ -19,5 +19,5 @@ const userSchema = new mongoose.Schema({
 	}
 })
 //esta linea me dice como van a ser guardados mis datos en mongo db
-export default moongose.model('User',userSchema)
+export default moongose.model('User',userScheman)
 
