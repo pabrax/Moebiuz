@@ -36,5 +36,15 @@ Esto inicializara el servidor haciendo uso de la herramienta de nodemon, que per
 
 - Se ha creado el servidor y las rutas "register" y "login".
 
+- se han realizado validaciones desde el servidor
+
+- se ha creado el CRUD de tareas
+
+- se ha conectado con mongodb
+
+- se registran usuarios
+
+- se ha configurado el token (JWT) (falta validar)
+
 - El servidor corre en el puerto 3000.
 
