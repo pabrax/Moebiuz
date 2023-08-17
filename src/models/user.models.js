@@ -1,7 +1,7 @@
 import mongoose from 'moongose'
 
 
-const userSchema = mongose.Schema({
+const userSchema = new mongoose.Schema({
 	username:{
 		type: String,
 		required:true,
@@ -10,6 +10,7 @@ const userSchema = mongose.Schema({
 	email:{
 		type: String,
 		required:true,
+		trim: true,
 		unique:true,	
 	},
 	password:{
@@ -18,5 +19,5 @@ const userSchema = mongose.Schema({
 	}
 })
 //esta linea me dice como van a ser guardados mis datos en mongo db
-export default moongose.model('User',userScheman)
+export default moongose.model('User',userSchema)
 

@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
 
-export const connectDB = async ()=>{
-   try{    console.log(db is connect bb);
-	   await mongoose.connect('mongodb://localhost/moebiuz')
+export const connectDB = async () =>{
+   try{    
+      await mongoose.connect('mongodb+srv://admin:moebiuz123@moebiuz.zj2ifg6.mongodb.net/?retryWrites=true&w=majority')
+      console.log("funciona :D");
+
    }
    catch(error){ 
         console.log(error);
