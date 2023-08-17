@@ -14,10 +14,11 @@ export const createTask = async (req, res) => {
     });
 
     const savedtask = await newTask.save();
+    res.json(savedtask);
 };
 
 export const getTask = async (req, res) => {
-
+    const task = await Task.findOne
 };
 
 export const updateTask = async (req, res) => {
