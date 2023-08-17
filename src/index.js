@@ -6,7 +6,7 @@ import {connectDB} from  './db.js'
 connectDB();
 
 // se define el puerto de escucha y manda un mensaje por consola
-app.listen(3000)
+app.listen(3000);
 console.log("server on port ", 3000);
 
 

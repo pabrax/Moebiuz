@@ -1,4 +1,4 @@
-import mongoose from 'moongose'
+import mongoose from 'mongoose'
 
 
 const userSchema = new mongoose.Schema({
@@ -17,7 +17,10 @@ const userSchema = new mongoose.Schema({
 		type: String,
 		requiered:true,
 	}
-})
+},{
+	timestamps:true
+	
+});
 //esta linea me dice como van a ser guardados mis datos en mongo db
-export default moongose.model('User',userScheman)
+export default mongoose.model('User',userSchema)
 

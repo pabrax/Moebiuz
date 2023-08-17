@@ -1,5 +1,5 @@
 //importaciones
-import User from "../models/user.model.js";
+import User from "../models/user.models.js";
 import bcrypt from 'bcryptjs';
 
 
@@ -19,17 +19,19 @@ export const register = async (req, res) => {
       //console.log(email, password, username);
       console.log('registrando guiño guiño'); 
       //datos que va a utilizar el fronted ACA VAMOS 
+      
       res.json({
         id: userSaved._id,
         username: userSaved.username,
         email: userSaved.email,
-        createdAt: userSaved.
+        createdAt: userSaved.createdAt,
+        updatedAt: userSaved.updatedAt
       })
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 };
 
 export const login = (req, res) => { 
-  res.send('login') 
+  res.send('login')
 };
