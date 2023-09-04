@@ -1,36 +1,81 @@
-# Moebiuz
 
-En este apartado se encuentra la informacion general sobre el Proyecto.
+# Moebiuz - Aplicación de Gestión de Tareas
 
-En el apartado de [Requisitos](./requeriments.md), se encuentran los requisitos e historias de usuarios definidas para este Sprint.
+Moebiuz es una aplicación fullstack que te permite gestionar tus tareas de manera eficiente. Puedes crear, eliminar y modificar tareas, además de registrar y autenticar usuarios para un acceso personalizado.
 
-## Configuracion
+## Contenido
 
-Las dependencias se instalan desde la terminal por medio de `npm`. para instalar las dependecias escriba en la terminal:
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Dependencias](#dependencias)
 
+## Instalación
+
+Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina:
+
+1. Clona este repositorio en tu computadora.
+
+```bash
+git clone https://github.com/TuUsuario/moebiuz.git
+cd moebiuz
 ```
+
+2. Instala las dependencias necesarias.
+
+```bash
 npm install
 ```
 
-Esto descargara las dependencias necesarias para el proyecto.
-
-## Frontend
-
-Para el frontend creen una carpeta en la ubicacion de src llamada `Client` la pueden crear manualmente o haciendo uso de la herramienta de **viteJS** (creo que seria bueno usar vite).
-
-[Aqui un recurso donde pueden ver el uso de la herramienta.](https://www.youtube.com/watch?v=UX4gvort2TU)
-
-## Backend
-
-Para iniciar el Servidor se ejecuta desde la carpeta Principal en la terminal el comando:
-
-> #### No es necesario para front
+3. Crea un archivo `.env` en la raíz del proyecto y configura las variables de entorno necesarias. Asegúrate de incluir las siguientes:
 
 ```
+MONGODB_URI=URL_de_tu_base_de_datos
+PORT=puerto_donde_se_ejecuta
+JWT_SECRET=Tu_secreto_para_generar_tokens_JWT
+```
+
+4. Inicia la aplicación en modo de desarrollo.
+
+```bash
 npm run dev
 ```
+La aplicación estará disponible en http://localhost:3000.
 
-Esto inicializara el servidor haciendo uso de la herramienta de nodemon, que permite que el servidor se reinicie automaticamente cuando se realicen cambios.
+## Uso
+
+Describe aquí cómo los usuarios pueden utilizar tu aplicación para gestionar tareas y realizar otras acciones importantes. Proporciona ejemplos de API endpoints si es relevante.
+
+## Estructura del Proyecto
+La estructura del proyecto está organizada de la siguiente manera:
+
+```
+moebiuz/
+  ├── src/
+  │    ├── controllers/
+  │    │    # Controladores para manejar las peticiones HTTP
+  │    ├── models/
+  │    │    # Definiciones de modelos de datos de la base de datos
+  │    ├── routes/
+  │    │    # Definiciones de rutas y manejo de peticiones
+  │    ├── index.js
+  ├── .env.example
+  ├── package.json
+  └── README.md
+```
+
+## Dependencias
+Este proyecto utiliza las siguientes dependencias principales:
+
+- bcryptjs: Para el hashing de contraseñas.
+- cookie-parser: Para el manejo de cookies.
+- dotenv: Para la configuración de variables de entorno.
+- express: Para el servidor web y el enrutamiento.
+- jsonwebtoken: Para la autenticación basada en JWT.
+- mongoose: Para la interacción con la base de datos MongoDB.
+- morgan: Para el registro de solicitudes HTTP.
+- zod: Para la validación de datos.
+
 
 ## Features
 
