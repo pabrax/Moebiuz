@@ -8,10 +8,11 @@ export const getTasks = async (req, res) => {
 };
 
 export const createTask = async (req, res) => {
-    const { title, description, date } = req.body
+    const { title, description, date, status } = req.body
     const newTask = new Task({
         title,
         description,
+        status,
         date,
         user: req.user.id
     });
