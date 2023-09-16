@@ -4,24 +4,22 @@
 <head>
     <meta charset="utf-8">
     <title>Log In</title>
-    <link rel="stylesheet" href="./CSS/master.css">
-    <!-- <style>
-        @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
-    </style> -->
+    <link rel="stylesheet" href="../CSS/login.css">
+
 </head>
 
 <body>
     <div class="container">
         
         <div class="imagen" ; align="center" ;>
-            <img src="./IMG/Frame_52.png" alt="">
+            <img src="../IMG/LogIn/Frame_52.png" alt="">
         </div>
 
         <div class="login_form" ; align="center">  
             <h3 id="title">¡Bienvenido a Moebiuz!</h3>
             <h3 id="desc">Organizer app</h3>
 
-            <form action="login" method="POST" id="loginn">
+            <form action="/api/login" method="POST" id="loginn">
                 <input class="filling" type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
 
                 <input class="filling" type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>

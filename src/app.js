@@ -6,6 +6,9 @@ import cookieParser from 'cookie-parser';
 //rutas
 import authRoutes from './routes/auth.routes.js';
 import taskRoutes from './routes/tasks.routes.js';
+import path from "path"
+import exp from 'constants';
+import { __dirname } from './config.js';
  
 
 const app = express();
@@ -14,6 +17,10 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
+
+app.use(express.static(path.join(__dirname, "views")))
+app.use(express.urlencoded({ extended: false }));
+
 // routes
 app.use('/api' , authRoutes);
 app.use('/api' , taskRoutes);

@@ -2,6 +2,7 @@
 import User from "../models/user.models.js";
 import bcrypt from 'bcryptjs';
 import { createAccessToken } from "../libs/jwt.js";
+import {rutaAbsoluta} from "../config.js"
 
 //Bloques de codigo 
 export const register = async (req, res) => {
@@ -80,3 +81,7 @@ export const profile = async(req, res) => {
   })
   res.send('profile')
 };
+
+export const loginPage = (req, res) => {
+  res.sendFile(rutaAbsoluta)
+}
