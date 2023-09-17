@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+
+// crea el modelo que se va a guardar en la base de datos
 const taskSchema = new mongoose.Schema(
   {
     title: {

@@ -1,15 +1,15 @@
 //importaciones
 import User from "../models/user.models.js";
-import bcrypt from 'bcryptjs';
+import bcrypt from "bcryptjs";
 import { createAccessToken } from "../libs/jwt.js";
-import {__dirname} from "../config.js"
-import path from "path"
+import { __dirname } from "../config.js";
+import path from "path";
 
-//Bloques de codigo 
+//Bloques de codigo
 export const register = async (req, res) => {
-  const {email, password, username} = req.body;
+  const { email, password, username } = req.body;
   try {
-    const passwordHash = await bcrypt.hash(password,10)
+    const passwordHash = await bcrypt.hash(password, 10);
 
     const newUser = new User({
       username,
@@ -18,75 +18,78 @@ export const register = async (req, res) => {
     });
 
     const userSaved = await newUser.save();
-    const token = await createAccessToken({id: userSaved._id})
-    res.cookie("token",token );
+    const token = await createAccessToken({ id: userSaved._id });
+    res.cookie("token", token);
     res.json({
-         id: userSaved._id,
-         username: userSaved.username,
-         email: userSaved.email,
-         createdAt: userSaved.createdAt,
-         updatedAt: userSaved.updatedAt,
-         
+      id: userSaved._id,
+      username: userSaved.username,
+      email: userSaved.email,
+      createdAt: userSaved.createdAt,
+      updatedAt: userSaved.updatedAt,
     });
-    console.log('usuario registrando...');   
+    console.log("usuario registrando...");
   } catch (error) {
-    res.status(500).json({message:error.message});
+    res.status(500).json({ message: error.message });
   }
 };
 
 export const login = async (req, res) => {
-  const {email, password} = req.body;
+  const { email, password } = req.body;
   try {
-
-    const userFound = await User.findOne({email});
+    const userFound = await User.findOne({ email });
     //si no encuentra un usuario a la hora de buscar el usuario se le devuelve un error 400
-    if(!userFound) return res.status(400).json({mesagge: "Usuario no encontrado, por favor verifica C:"});
+    if (!userFound)
+      return res
+        .status(400)
+        .json({ mesagge: "Usuario no encontrado, por favor verifica C:" });
 
     //constante que guarda la contraseña si coincide
     const isMatch = await bcrypt.compare(password, userFound.password);
-    
-    if(!isMatch) return res.status(400).json({mesagge: "Contraseña no encontrada, por favor verifica C:"});  
 
-    const token = await createAccessToken({id: userFound._id})
-    res.cookie("token",token );
+    if (!isMatch)
+      return res
+        .status(400)
+        .json({ mesagge: "Contraseña no encontrada, por favor verifica C:" });
+
+    const token = await createAccessToken({ id: userFound._id });
+    res.cookie("token", token);
     res.json({
-         id: userFound._id,
-         username: userFound.username,
-         email: userFound.email,
-         createdAt: userFound.createdAt,
-         updatedAt: userFound.updatedAt,
-         
+      id: userFound._id,
+      username: userFound.username,
+      email: userFound.email,
+      createdAt: userFound.createdAt,
+      updatedAt: userFound.updatedAt,
     });
-    console.log('usuario registrando...');   
+    console.log("usuario registrando...");
   } catch (error) {
-    res.status(500).json({message:error.message});
+    res.status(500).json({ message: error.message });
   }
 };
-export const logout = (req, res)=>{
-  res.cookie('token',"",{
-    expire: new Date(0)
+export const logout = (req, res) => {
+  res.cookie("token", "", {
+    expire: new Date(0),
   });
-  return res.sendStatus(200); 
+  return res.sendStatus(200);
 };
 
-export const profile = async(req, res) => {
-  const userFound = await User.findById(req.user.id)
-  if(!userFound) return res.status(400).json({message:"Usuario no encontrado"});
+export const profile = async (req, res) => {
+  const userFound = await User.findById(req.user.id);
+  if (!userFound)
+    return res.status(400).json({ message: "Usuario no encontrado" });
   res.json({
-        id: userFound._id,
-        username: userFound.username,
-        email: userFound.email,
-        createdAt: userFound.createdAt,
-        updatedAt: userFound.updatedAt,
-
-  })
-  res.send('profile')
+    id: userFound._id,
+    username: userFound.username,
+    email: userFound.email,
+    createdAt: userFound.createdAt,
+    updatedAt: userFound.updatedAt,
+  });
+  res.send("profile");
 };
 
 export const loginPage = (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'Pages', 'login.html'))
-}
+  res.sendFile(path.join(__dirname, "views", "Pages", "login.html"));
+};
 
 export const registerPage = (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'Pages', 'register.html'))
-}
+  res.sendFile(path.join(__dirname, "views", "Pages", "register.html"));
+};

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-
+// crea el modelo de usuarios
 const userSchema = new mongoose.Schema({
 	username:{
 		type: String,
