@@ -12,8 +12,17 @@ body {
     background-attachment: fixed;
 }
 
-h3{
-font-size: 25px;}
+.container {
+    background-color: #252726;
+    width: 1400px;
+    height: 700px;
+    border-radius: 20px;
+    position: absolute;
+    left: 250px;
+    top: 100px;
+    flex:auto;  
+    display: block;
+}
 
 .imagen {
     width: 50%;
@@ -29,21 +38,6 @@ font-size: 25px;}
     font-size: 30px;
     margin-top: 2%;
 }
-
-
-.container {
-    
-    background-color: #252726;
-    width: 1400px;
-    height: 700px;
-    border-radius: 20px;
-    position: absolute;
-    left: 250px;
-    top: 100px;
-    flex:auto;  
-    display: block;
-}
-
 
 button {
     background-color: #858887;
@@ -81,18 +75,6 @@ img {
 }
 input {
     border-radius: 5px;
-
-}
-
-a {
-    outline: none;
-    text-decoration: none;
-    color: #fff;
-    display: block;
-}
-
-
-.filling{
     width: 50%;
     box-sizing: border-box;
     position:relative;
@@ -103,9 +85,16 @@ a {
     border-color: #252726;
     color: #fff;
 }
-.filling::placeholder {
+input::placeholder {
     text-align: center;
     color: #fff;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+    display: block;
 }
 
 #loginn {
@@ -115,5 +104,4 @@ a {
     vertical-align: middle;
     box-sizing: border-box;
     margin: 0;
-
 }

@@ -2,7 +2,8 @@
 import User from "../models/user.models.js";
 import bcrypt from 'bcryptjs';
 import { createAccessToken } from "../libs/jwt.js";
-import {rutaAbsoluta} from "../config.js"
+import {__dirname} from "../config.js"
+import path from "path"
 
 //Bloques de codigo 
 export const register = async (req, res) => {
@@ -83,5 +84,9 @@ export const profile = async(req, res) => {
 };
 
 export const loginPage = (req, res) => {
-  res.sendFile(rutaAbsoluta)
+  res.sendFile(path.join(__dirname, 'views', 'Pages', 'login.html'))
+}
+
+export const registerPage = (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'Pages', 'register.html'))
 }
