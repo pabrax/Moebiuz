@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html, body{
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    font-family:'Montserrat';
+    background-color: #313131;
+}
+
+button{
+    border: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.general_content{
+    width:100%; 
+    height:100%; 
+    background: #313332; 
+    justify-content: center; 
+    align-items: flex-start; 
+    display: inline-flex
+}
+
+.nav_bar{
+    position: fixed;
+    left: 0px;
+    width: auto;
+    height:100vh;
+    align-self: stretch; 
+    padding: 10px; 
+    background: #252726; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 325px; 
+    display: inline-flex
+}
+
+#nav_bar_container{
+    height: fit-content;
+    width: 56px; 
+    flex: 1 1 0; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+    display: flex
+}
+
+#container_profile{
+    align-self: stretch; 
+    height: 83px; 
+    border-radius: 10px; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+    display: flex
+}
+
+#nav_bar_divider{
+    align-self: stretch; 
+    height: 21px; 
+    padding-top: 10px; 
+    padding-bottom: 10px
+}
+
+#naV_bar_image{
+    max-width: auto;
+    max-height: auto;
+    padding: 10px; 
+    border-radius: 10px
+}
+
+#container_teams{
+    height: 100%;
+    align-self: stretch; 
+    flex: 1 1 0; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30px; 
+    display: flex
+}
+
+#container_addbtn{
+    align-self: stretch; 
+    height: 83px; 
+    padding-bottom: 25px;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+    display: flex
+}
+
+#addbtn{
+    padding-left: 18px; 
+    padding-right: 18px; 
+    padding-top: 8px; 
+    padding-bottom: 8px; 
+    background: #858887; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: flex
+}
+
+#nav_bar_text{
+    color: #F5F6F5; 
+    font-size: 40px;  
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+.app_content{
+    flex: 1 1 0; 
+    align-self: stretch; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    display: inline-flex
+}
+
+.head{
+    width: auto;
+    align-self: stretch; 
+    padding-left: 30px; 
+    padding-right: 30px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    background: #4D514F; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: inline-flex
+}
+
+#head_text{
+    text-align: center; 
+    color: #F5F6F5; 
+    font-size: 30px;  
+    font-weight: 700; 
+    word-wrap: break-word
+}
+
+.main_content{
+    width: auto;
+    align-self: stretch; 
+    flex: 1 1 0; 
+    padding: 20px; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 20px; 
+    display: inline-flex
+}
+
+.cards_container{
+    flex: 1 1 0; 
+    align-self: stretch; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 10px; 
+    display: inline-flex
+}
+
+.cards_container_content{
+    align-self: stretch; 
+    flex: 1 1 0; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 30px; 
+    display: inline-flex
+}
+
+.cards_container_content_rows{
+    height: auto;
+    flex: 1 1 0; 
+    align-self: stretch; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 40px; 
+    display: inline-flex
+}
+
+#cards_container_content_rows_title{
+    height: max-content;
+    align-self: stretch; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    background: #858887; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: flex
+}
+
+#cards_container_content_rows_text{
+    flex: 1 1 0; 
+    text-align: center; 
+    color: #F5F6F5; 
+    font-size: 20px;  
+    font-weight: bold; 
+    word-wrap: break-word
+}
+
+.cards_content_container{
+    align-self: stretch; 
+    height: auto; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 40px; 
+    display: flex
+}
+
+.card{
+    align-self: stretch; 
+    height: auto; 
+    padding: 20px; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    display: flex
+}
+
+#card_title{
+    align-self: stretch; 
+    text-align: center; 
+    color: #F5F6F5; 
+    font-size: 25px; 
+    font-weight: 700; 
+    word-wrap: break-word
+}
+
+#card_desc_container{
+    align-self: stretch; 
+    padding: 10px; 
+    background: rgba(255, 255, 255, 0.20); 
+    border-radius: 10px; 
+    overflow: hidden; 
+    justify-content:center; 
+    align-items: center; 
+    gap: 10px; 
+    display: inline-flex
+}
+
+#card_desc_text{
+    flex: 1 1 0; 
+    align-self: stretch; 
+    text-align: center; 
+    color: #F5F6F5; 
+    font-size: 15px;  
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+#card_tag_btn{
+    align-self: stretch; 
+    height: auto; 
+    padding-left: 70px; 
+    padding-right: 70px; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    border: 1px #F5F6F5 solid; 
+    justify-content: center;
+    gap: 20px; 
+    display: inline-flex
+}
+
+#card_tag_text_container{
+    width:max-content;
+    align-self: stretch; 
+    height: 20px; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    display: inline-flex
+}
+
+#card_tag_text{
+    text-align: center; 
+    background: none;
+    color: #E6E7E6; 
+    font-size: 15px;  
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+.cards_addbtn{
+    align-self: stretch; 
+    padding-left: 31px; 
+    padding-right: 31px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    background: #858887; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    display: inline-flex
+}
+
+#cards_addbtn_text{
+    flex: 1 1 0; 
+    text-align: center; 
+    color: #F5F6F5; 
+    font-size: 30px;  
+    font-weight: 700; 
+    word-wrap: break-word
+}
+
+.addtag_btn{
+    width: auto;
+    height: auto; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    background: #858887;
+    border-radius: 10px; 
+    overflow: hidden; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: flex
+}
+
+#addtag_btn_text{
+    flex: 1 1 0; 
+    text-align: center; 
+    color: #F5F6F5; 
+    font-size: 20px;   
+    font-weight: bold;
+    word-wrap: break-word
+}
+
+.pomodoro_container{
+    width: auto; 
+    align-self: stretch; 
+    padding-left: 30px; 
+    padding-right: 30px; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 40px; 
+    display: inline-flex
+}
+
+.pomodoro_top{
+    align-self: stretch; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: inline-flex
+}
+
+#pomodoro_top_buttons{
+    width: fit-content;
+    flex: 1 1 0; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 2px; 
+    display: inline-flex
+}
+
+#pomodoro_top_buttons_text{
+    align-self: stretch; 
+    text-align: center;
+    color: #858887; 
+    font-size: 20px;  
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+#pomodoro_top_buttons_divider{
+    align-self: stretch; 
+    height: 0px; 
+    border: 2px #858887 solid
+}
+
+.pomodoro_timer_container{
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: flex
+}
+
+#pomodoro_timer_text{
+    width: 26.83px; 
+    height: 45.02px; 
+    color: #F5F6F5; 
+    font-size: 40px;  
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+#pomodoro_timer_time{
+    text-align: center; 
+    color: #F5F6F5; 
+    font-size: 70px;  
+    font-weight: 700; 
+    word-wrap: break-word
+}
+
+.pomodoro_start_button{
+    width:100%; 
+    padding: 20px; 
+    background: #CFD2D0; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: inline-flex
+}
+
+#pomodoro_start_button_text{
+    flex: 1 1 0; 
+    text-align: center; 
+    color: #252726; 
+    font-size: 30px;  
+    font-weight: 700; 
+    word-wrap: break-word
+}
+
+#pomodoro_todo_section{
+    align-self: stretch; 
+    height: 35px; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 5px; 
+    display: flex
+}
+
+#pomodoro_todo_section_title{
+    text-align: center; 
+    color: #F5F6F5; 
+    font-size: 25px;  
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+#pomodoro_todo_section_divider{
+    align-self: stretch; 
+    height: 0px; 
+    border: 2px #F5F6F5 solid
+}
+
+.pomodoro_todolist_container{
+    align-self: stretch; 
+    flex: 1 1 0; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 30px; 
+    display: flex
+}
+
+.pomodoro_todolist_addtodo_button{
+    align-self: stretch; 
+    height: auto; 
+    padding: 10px;
+    border-radius: 10px; 
+    overflow: hidden; 
+    border: 2px #4D514F dotted; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 10px; 
+    display: flex
+}
+
+#pomodoro_todolist_text_container{
+    align-self: stretch; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: inline-flex
+}
+
+#pomodoro_todolist_text{
+    color: #7A7A7A; 
+    font-size: 20px;  
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+.cards_todo_container{
+    align-self: stretch; 
+    flex: 1 1 0; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 20px; 
+    display: flex
+}
+
+.cards_todo{
+    align-self: stretch; 
+    height: fit-content; 
+    padding: 20px; 
+    background: rgba(136, 136, 136, 0.50); 
+    border-radius: 10px; 
+    overflow: hidden; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 15px; 
+    display: flex
+}
+
+#cards_todo_title{
+    align-self: stretch; 
+    text-align: center; 
+    color: white; 
+    font-size: 25px; 
+    font-weight: bold; 
+    word-wrap: break-word
+}
+
+#cards_todo_desc_container{
+    align-self: stretch; 
+    padding-left: 24px; 
+    padding-right: 24px; 
+    padding-top: 12px; 
+    padding-bottom: 12px; 
+    background: rgba(255, 255, 255, 0.20); 
+    border-radius: 10px; overflow: hidden; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 10px; 
+    display: inline-flex
+}
+
+#cards_todo_desc{
+    flex: 1 1 0; 
+    text-align: center; 
+    color: white; 
+    font-size: 20px;  
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+#cards_todo_go-todo{
+    align-self: stretch; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display:inline-flex
+}
+
+#cards_todo_go-todo_text{
+    width: auto; 
+    color: white; 
+    font-size: 20px;  
+    font-weight: 400;
+    word-wrap: break-word
+}
