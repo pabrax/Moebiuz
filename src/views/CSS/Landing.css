@@ -98,7 +98,7 @@ align-content: space-between;
 }
 
 .seccion-one {
-    background-image: url('img/moebiuz_bg.png');
+    background-image: url('../IMG/landing/moebiuz_bg.png');
     background-color: #313332;
     background-repeat: no-repeat;
     background-size: cover;

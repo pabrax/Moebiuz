@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 //rutas
 import authRoutes from './routes/auth.routes.js';
 import taskRoutes from './routes/tasks.routes.js';
+import pagesRoutes from './routes/pages.routes.js'
 import path from "path"
 import exp from 'constants';
 import { __dirname } from './config.js';
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 // routes
 app.use('/api' , authRoutes);
 app.use('/api' , taskRoutes);
+app.use('/api', pagesRoutes)
 
 // exporta el modulo de express para usarlo en index.js
 export default app;
