@@ -7,5 +7,5 @@ export const homePage = (req, res) => {
 }
 
 export const landingPage = (req, res) => {
-    res.sendFile(path.join(parentDir, 'public', 'Pages', 'Landing.html'))
+    res.sendFile(path.join(parentDir, 'public', 'Pages', 'index.html'))
 }

@@ -5,10 +5,13 @@ Moebiuz es una aplicación fullstack que te permite gestionar tus tareas de mane
 
 ## Contenido
 
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Dependencias](#dependencias)
+- [Moebiuz - Aplicación de Gestión de Tareas](#moebiuz---aplicación-de-gestión-de-tareas)
+  - [Contenido](#contenido)
+  - [Instalación](#instalación)
+  - [Uso](#uso)
+  - [Estructura del Proyecto](#estructura-del-proyecto)
+  - [Dependencias](#dependencias)
+  - [Features](#features)
 
 ## Instalación
 
@@ -17,8 +20,8 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina:
 1. Clona este repositorio en tu computadora.
 
 ```bash
-git clone https://github.com/TuUsuario/moebiuz.git
-cd moebiuz
+git clone https://github.com/pabrax/Moebiuz.git
+cd Moebiuz
 ```
 
 2. Instala las dependencias necesarias.
