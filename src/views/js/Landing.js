@@ -1,9 +1,7 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    const elementosCarousel = document.querySelectorAll('.carousel');
+    const elementosCarousel = document.querySelectorAll('#carousel1');
     M.Carousel.init(elementosCarousel, {
-        duration: 150,
+        duration: 100,
         dist: -85,
         shift: 5,
         padding: 5,
@@ -13,36 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-const grande    = document.querySelector('.grande')
-const punto     = document.querySelectorAll('.punto')
-
-
-punto.forEach( ( cadaPunto , i )=> {
-   
-    punto[i].addEventListener('click',()=>{
-
-       
-        let posicion  = i
-        let operacion = posicion * -30
-
-        
-        grande.style.transform = `translateX(${ operacion }%)`
-
-       
-        punto.forEach( ( cadaPunto , i )=>{
-            
-            punto[i].classList.remove('activo')
-        })
-      
-        punto[i].classList.add('activo')
-
-    })
-})
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    const elementosCarousel = document.querySelectorAll('#carousel2');
+    M.Carousel.init(elementosCarousel, {
+        duration: 100,
+        dist: -80,
+        shift: 5,
+        padding: 5,
+        numVisible: 3,
+        indicators: true,
+        noWrap: false
+    });
+});
 
 // Cuando se hace clic en un botón para desplazar hacia arriba
-ddocument.getElementById('boton-somos').addEventListener('click', function() {
+ddocument.getElementById('boton-somos').addEventListener('click', function () {
     window.scrollBy({
         top: window.innerHeight,
         behavior: 'smooth'
