@@ -8,26 +8,26 @@
     <title>Register</title>
 </head>
 <body>
-    <div class="container">
-        
-        <div class="imagen" ; align="center" ;>
+    <div class="main-content">
+        <div class="content-image">
             <img src="../IMG/LogIn/Frame_52.png" alt="">
         </div>
-
-        <div class="register_form" ; align="center">  
+        <div class="content-form">
             <h3 id="title">¡Bienvenido a Moebiuz!</h3>
             <h3 id="desc">Organizer app</h3>
 
             <form action="/register" method="POST" id="loginn">
+
+                <input type="text" name="Nombre" placeholder="Ingresa tu Nombre" required>
+                <input type="email" name="Apellido" placeholder="Ingresa tu Apellido" required>
                 <input type="text" name="username" placeholder="Ingresa tu Username" required>
                 <input type="email" name="email" placeholder="Ingresa tu correo" required>
-
                 <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
-                <!-- <input type="password" name="password" placeholder="repite tu contraseña" required> -->
+                <input type="password" name="password" placeholder="repite tu contraseña" required>
                 <a href="/login">¿Ya tienes cuenta? Inicia sesion</a>
                 <button>registarse</button>
-
             </form>
         </div>
+    </div>
 </body>
 </html>
