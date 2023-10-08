@@ -2,7 +2,7 @@
 import User from "../models/user.models.js";
 import bcrypt from "bcryptjs";
 import { createAccessToken } from "../libs/jwt.js";
-import { __dirname } from "../config.js";
+import { parentDir } from "../config.js";
 import path from "path";
 
 //Bloques de codigo
@@ -87,9 +87,9 @@ export const profile = async (req, res) => {
 };
 
 export const loginPage = (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "Pages", "login.html"));
+  res.sendFile(path.join(parentDir, "public", "Pages", "login.html"));
 };
 
 export const registerPage = (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "Pages", "register.html"));
+  res.sendFile(path.join(parentDir, "public", "Pages", "register.html"));
 };

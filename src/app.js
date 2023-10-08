@@ -8,7 +8,7 @@ import authRoutes from "./routes/auth.routes.js";
 import taskRoutes from "./routes/tasks.routes.js";
 import pagesRoutes from "./routes/pages.routes.js";
 import path from "path";
-import { __dirname } from "./config.js";
+import { parentDir } from "./config.js";
 
 const app = express();
 
@@ -17,13 +17,13 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, "views")));
+app.use(express.static(path.join(parentDir, "public")));
 app.use(express.urlencoded({ extended: false }));
 
 // routes
-app.use("/api", authRoutes);
-app.use("/api", taskRoutes);
-app.use("/api", pagesRoutes);
+app.use("/", authRoutes);
+app.use("/", taskRoutes);
+app.use("/", pagesRoutes);
 
 // exporta el modulo de express para usarlo en index.js
 export default app;
