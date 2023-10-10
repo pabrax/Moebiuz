@@ -2,6 +2,19 @@ import mongoose from 'mongoose'
 
 // crea el modelo de usuarios
 const userSchema = new mongoose.Schema({
+
+	name:{
+		type: String,
+		required:true,
+		trim:true,
+	},
+
+	lastname:{
+		type: String,
+		required:true,
+		trim:true,
+	},
+
 	username:{
 		type: String,
 		required:true,
@@ -15,8 +28,9 @@ const userSchema = new mongoose.Schema({
 	},
 	password:{
 		type: String,
-		requiered:true,
-	}
+		required:true,
+	},
+
 },{
 	timestamps:true
 	

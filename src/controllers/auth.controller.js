@@ -7,11 +7,13 @@ import path from "path";
 
 //Bloques de codigo
 export const register = async (req, res) => {
-  const { email, password, username } = req.body;
+  const { name, lastname, email, password, username } = req.body;
   try {
     const passwordHash = await bcrypt.hash(password, 10);
 
     const newUser = new User({
+      name,
+      lastname,
       username,
       email,
       password: passwordHash,
@@ -27,7 +29,7 @@ export const register = async (req, res) => {
       createdAt: userSaved.createdAt,
       updatedAt: userSaved.updatedAt,
     });
-    console.log("usuario registrando...");
+    console.log("registrando usuario...");
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

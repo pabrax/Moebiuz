@@ -3,6 +3,15 @@ import { z } from "zod";
 // se encarga de validar que los datos sean correctos
 
 export const registerSchema = z.object({
+  
+  name: z.string({
+    required_error: "name is required",
+  }),
+
+  lastname: z.string({
+    required_error: "lastname is required",
+  }),
+  
   username: z.string({
     required_error: "Username is required",
   }),
