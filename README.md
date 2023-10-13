@@ -54,6 +54,15 @@ La estructura del proyecto está organizada de la siguiente manera:
 
 ```
 moebiuz/
+  ├── Public/
+  │    ├── CSS/
+  │    │    # css utilizado para las páginas
+  │    ├── IMG/
+  │    │    # imagenes utilizadas para las páginas
+  │    ├── Js/
+  │    │    # archivos js utilizados para el dinamismo para las páginas
+  │    ├── Pages/
+  │    │    # Paginas del proyecto, donde destaca el index el cual es la pag principal
   ├── src/
   │    ├── controllers/
   │    │    # Controladores para manejar las peticiones HTTP
