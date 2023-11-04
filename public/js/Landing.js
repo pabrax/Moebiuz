@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const elementosCarousel = document.querySelectorAll('#carousel1');
     M.Carousel.init(elementosCarousel, {
         duration: 100,
-        dist: -85,
+        dist: -95,
         shift: 5,
         padding: 5,
-        numVisible: 5,
+        numVisible: 3,
         indicators: true,
         noWrap: false
     });
@@ -32,6 +32,20 @@ ddocument.getElementById('boton-somos').addEventListener('click', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+   var collapsibleElem = document.querySelector('.collapsible');
+   var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
 
 
 

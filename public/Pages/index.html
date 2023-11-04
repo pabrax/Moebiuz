@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+<meta name="viewport" content="width=device-width, inicial-scale=1.0">
 
 <head>
-    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../CSS/index.css" type="text/css">
 
@@ -14,6 +15,7 @@
 
     <header>
         <nav>
+            
             <div class="nav-wrapper">
                 <a href="#" class="title">Moebiuz Organizer App</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -25,20 +27,25 @@
                 </ul>
             </div>
         </nav>
-        <ul class="sidenav" id="mobile-nav">
-            <li><a href="#Inicio">Inicio</a></li>
-            <li><a href="#Quienes-somos">¿Quienes somos?</a></li>
-            <li><a href="#porque">¿Por qué usar Moebiuz?</a></li>
-            <li><a href="/login">Iniciar sesion</a></li>
-            <li><a href="/register">Comenzar ahora</a></li>
+        <ul id="slide-out" class="sidenav">
+            <li><a class="waves-effect"  href="#Inicio">Inicio</a></li>
+            <li><a class="waves-effect"  href="#Quienes-somos">¿Quienes somos?</a></li>
+            <li><a class="waves-effect"  href="#porque">¿Por qué usar Moebiuz?</a></li>
+            <li><a class="waves-effect"  href="/login">Iniciar sesion</a></li>
+            <li><a class="waves-effect"  href="/register">Comenzar ahora</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
         </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
     </header>
 
 
     <div class="seccion-one" id="Inicio">
         <div class="row">
             <div class="col s12">
-                <p class="title-seccion-one">Organiza tus tareas y pendientes individuales y grupales</p>
+                <h1 class="title-seccion-one">Organiza tus tareas y pendientes individuales y grupales</h1>
                 <p class="info-seccione-one"> Moebiuz Organizer App te brinda características necesarias para organizar
                     tus
                     tareas
@@ -50,23 +57,18 @@
         </div>
     </div>
 
-
     <div class="seccion-two" id="Quienes-somos">
-        <div class="row">
-            <div class="col s10">
-                <p class="titulo-quienesomos">¿Quiénes somos?</p>
-                <div class="center">
-                    <p class="texto-quienesomos">Moebiuz surge de un proyecto universitario, conformado por un equipo de
-                        5 estudiantes del Instituto universitario ITM del programa académico "Desarrollo de Software".
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
         <div class="container">
             <div class="row">
-                <div class="col s10 offset-s1">
+                <div class="col s12 m6">
+                    <p class="titulo-quienesomos">¿Quiénes somos?</p>
+                    <p class="texto-quienesomos">Moebiuz surge de un proyecto universitario, conformado por un
+                        equipo de
+                        5 estudiantes del Instituto universitario ITM del programa académico "Desarrollo de
+                        Software".
+                    </p>
+                </div>
+                <div class="col s12 m6">
                     <div class="carousel center-align" id="carousel1">
                         <div class="carousel-item">
                             <img src="../IMG/landing/Ann.jpg">
@@ -103,7 +105,7 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <div class="carousel" id="carousel2">
+                <div class="carousel" id="carousel2">
                         <div class="carousel-item" href="#one!">
                             <p class="texto-moe">Aumenta tu productividad</p>
                             <img src="../IMG/landing/usar.png">
@@ -117,7 +119,10 @@
                             <img src="../IMG/landing/crea.png">
 
                         </div>
-                    </div>
+                    </div> 
+
+                 
+
                 </div>
             </div>
         </div>
