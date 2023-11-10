@@ -22,13 +22,14 @@ export const register = async (req, res) => {
     const userSaved = await newUser.save();
     const token = await createAccessToken({ id: userSaved._id });
     res.cookie("token", token);
-    res.json({
-      id: userSaved._id,
-      username: userSaved.username,
-      email: userSaved.email,
-      createdAt: userSaved.createdAt,
-      updatedAt: userSaved.updatedAt,
-    });
+    // res.json({
+    //   id: userSaved._id,
+    //   username: userSaved.username,
+    //   email: userSaved.email,
+    //   createdAt: userSaved.createdAt,
+    //   updatedAt: userSaved.updatedAt,
+    // });
+    res.redirect('/home');
     console.log("registrando usuario...");
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -55,13 +56,15 @@ export const login = async (req, res) => {
 
     const token = await createAccessToken({ id: userFound._id });
     res.cookie("token", token);
-    res.json({
-      id: userFound._id,
-      username: userFound.username,
-      email: userFound.email,
-      createdAt: userFound.createdAt,
-      updatedAt: userFound.updatedAt,
-    });
+    // res.json({
+    //   id: userFound._id,
+    //   username: userFound.username,
+    //   email: userFound.email,
+    //   createdAt: userFound.createdAt,
+    //   updatedAt: userFound.updatedAt,
+    // });
+
+    res.redirect('/home');
     console.log("usuario registrando...");
   } catch (error) {
     res.status(500).json({ message: error.message });
