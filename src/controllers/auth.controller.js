@@ -2,8 +2,6 @@
 import User from "../models/user.models.js";
 import bcrypt from "bcryptjs";
 import { createAccessToken } from "../libs/jwt.js";
-import { parentDir } from "../config.js";
-import path from "path";
 
 //Bloques de codigo
 export const register = async (req, res) => {
@@ -22,13 +20,6 @@ export const register = async (req, res) => {
     const userSaved = await newUser.save();
     const token = await createAccessToken({ id: userSaved._id });
     res.cookie("token", token);
-    // res.json({
-    //   id: userSaved._id,
-    //   username: userSaved.username,
-    //   email: userSaved.email,
-    //   createdAt: userSaved.createdAt,
-    //   updatedAt: userSaved.updatedAt,
-    // });
     res.redirect('/home');
     console.log("registrando usuario...");
   } catch (error) {
@@ -56,14 +47,6 @@ export const login = async (req, res) => {
 
     const token = await createAccessToken({ id: userFound._id });
     res.cookie("token", token);
-    // res.json({
-    //   id: userFound._id,
-    //   username: userFound.username,
-    //   email: userFound.email,
-    //   createdAt: userFound.createdAt,
-    //   updatedAt: userFound.updatedAt,
-    // });
-
     res.redirect('/home');
     console.log("usuario registrando...");
   } catch (error) {
@@ -91,10 +74,3 @@ export const profile = async (req, res) => {
   res.send("profile");
 };
 
-export const loginPage = (req, res) => {
-  res.sendFile(path.join(parentDir, "public", "Pages", "login.html"));
-};
-
-export const registerPage = (req, res) => {
-  res.sendFile(path.join(parentDir, "public", "Pages", "register.html"));
-};
