@@ -125,7 +125,12 @@ button {
         width: 100px;
         height: 25px;
         border-radius: 10px;
-        
+        margin-left: 50%;
+    }
+
+    .loginn{
+        align-items: center;
+        justify-content: center;
     }
 
 }

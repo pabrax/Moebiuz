@@ -3,27 +3,22 @@
 <meta name="viewport" content="width=device-width, inicial-scale=1.0">
 
 <head>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../CSS/index.css" type="text/css">
-
     <title> Moebiuz - Landing </title>
-
 </head>
 
 <body>
-
     <header>
-        <nav>
-            
+        <nav>      
             <div class="nav-wrapper">
                 <a href="#" class="title">Moebiuz Organizer App</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#Inicio">Inicio</a></li>
-                    <li><a href="#Quienes-somos">¿Quienes somos?</a></li>
-                    <li><a href="#porque">¿Por qué usar Moebiuz?</a></li>
-                    <li><a href="/login">Iniciar sesion</a></li>
-                    <li><a href="/register">Comenzar ahora</a></li>
+                    <li><a class="waves-effect waves-light" href="#Inicio">Inicio</a></li>
+                    <li><a class="waves-effect waves-light" href="#Quienes-somos">¿Quienes somos?</a></li>
+                    <li><a class="waves-effect waves-light" href="#porque">¿Por qué usar Moebiuz?</a></li>
+                    <li><a class="waves-effect waves-light" href="/login">Iniciar sesion</a></li>
+                    <li><a class="waves-effect waves-light" href="/register">Comenzar ahora</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,10 +33,7 @@
             </li>
         </ul>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-
     </header>
-
-
     <div class="seccion-one" id="Inicio">
         <div class="row">
             <div class="col s12">
@@ -51,7 +43,9 @@
                     tareas
                     diarias, semanales y mensuales para ti y tu equipo</p>
                 <div class="center">
-                    <button class="botton-comenzar-ahora">Comienza ahora</button>
+                    <a href="/register">
+                        <button class="botton-comenzar-ahora">Comienza ahora</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -100,7 +94,6 @@
             </div>
         </div>
     </div>
-
     <div class="seccion-tree" id="porque">
         <div class="container">
             <div class="row">
@@ -117,12 +110,8 @@
                         <div class="carousel-item" href="#three!">
                             <p class="texto-moe">Trabaja de forma colaborativa</p>
                             <img src="../IMG/landing/crea.png">
-
                         </div>
                     </div> 
-
-                 
-
                 </div>
             </div>
         </div>
@@ -132,7 +121,4 @@
     <script src="../js/Landing.js"></script>
 
 </body>
-
-
-
 </html>
