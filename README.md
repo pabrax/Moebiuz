@@ -11,7 +11,7 @@ Moebiuz es una aplicación fullstack que te permite gestionar tus tareas de mane
   - [Uso](#uso)
   - [Estructura del Proyecto](#estructura-del-proyecto)
   - [Dependencias](#dependencias)
-  - [Features](#features)
+  - [Api Externa](#api-externa)
 
 ## Instalación
 
@@ -88,20 +88,8 @@ Este proyecto utiliza las siguientes dependencias principales:
 - morgan: Para el registro de solicitudes HTTP.
 - zod: Para la validación de datos.
 
+## Api Externa
 
-## Features
+Se trata de un cliente Construido En react que consume la Api de rick y morty, que se encarga de servir contenido relacionado con la serie.
 
-- Se ha creado el servidor y las rutas "register" y "login".
-
-- se han realizado validaciones desde el servidor
-
-- se ha creado el CRUD de tareas
-
-- se ha conectado con mongodb
-
-- se registran usuarios
-
-- se ha configurado el token (JWT) (falta validar)
-
-- El servidor corre en el puerto 3000.
-
+para conocer mas Visita el Repositorio de [WIki y Morty](https://github.com/pabrax/practicaReact).
